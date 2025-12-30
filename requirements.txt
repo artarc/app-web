@@ -1,0 +1,7 @@
+Django>=6.0,<7.0
+django-tailwind>=2.0
+whitenoise>=6.0
+sqlparse>=0.4.4
+
+# Para desenvolvimento com Tailwind você também precisa de Node.js e das dependências npm
+# (por exemplo: tailwindcss, postcss, autoprefixer) na pasta do app `theme`.
