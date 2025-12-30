@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard</title>
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+        <div>
+          <a href="{% url 'logout' %}" class="text-sm text-red-600 hover:underline">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6">
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-700">Bem-vindo ao painel administrativo.</p>
+        <p class="mt-4 text-sm text-gray-600">Variação atual: <strong>{{ variation|default:'padrão' }}</strong></p>
+        <div class="mt-4 space-x-2">
+          <a href="{% url 'dashboard' %}" class="px-3 py-1 bg-gray-200 rounded">Padrão</a>
+          <a href="{% url 'dashboard_variation' variation='v1' %}" class="px-3 py-1 bg-gray-200 rounded">Variação v1</a>
+          <a href="{% url 'dashboard_variation' variation='v2' %}" class="px-3 py-1 bg-gray-200 rounded">Variação v2</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

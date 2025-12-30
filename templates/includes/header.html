@@ -1,0 +1,11 @@
+{% load static %}
+<header class="bg-white shadow">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="{% url 'index' %}" class="text-xl font-bold text-gray-800">App Web</a>
+    <nav class="space-x-4 text-sm">
+      <a href="{% url 'index' %}" class="text-gray-600 hover:text-gray-900">Início</a>
+      <a href="{% url 'login' %}" class="text-gray-600 hover:text-gray-900">Entrar</a>
+      <a href="/admin/" class="text-gray-600 hover:text-gray-900">Admin</a>
+    </nav>
+  </div>
+</header>
