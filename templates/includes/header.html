@@ -30,26 +30,7 @@
         {% else %}
           <a href="{% url 'login' %}" class="text-sm px-3 py-1 bg-indigo-600 text-white rounded">Entrar</a>
         {% endif %}
-
-        <!-- Theme toggle -->
-        <button id="themeToggle" aria-label="Alternar tema" class="p-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:opacity-90">
-          <svg id="iconTheme" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1z" />
-          </svg>
-        </button>
-      </div>
     </div>
   </div>
 
-  <script>
-    (function(){
-      const btn = document.getElementById('themeToggle');
-      const root = document.documentElement;
-      if(localStorage.getItem('theme') === 'dark') root.classList.add('dark');
-      btn.addEventListener('click', ()=>{
-        root.classList.toggle('dark');
-        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-      });
-    })();
-  </script>
 </header>
